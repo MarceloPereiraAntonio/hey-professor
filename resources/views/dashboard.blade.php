@@ -10,5 +10,16 @@
                 <x-btn.primary type="submit"> Save </x-btn.primary>
                 <x-btn.reset type="reset"> Cancel </x-btn.reset>
         </x-form>
+
+        <hr class="border-gray-700 border-dashed my-4">
+
+        {{-- listagem --}}
+        <h1 class="dark:text-gray-500 uppercase font-bold mb-1">List of questions</h1>
+        <div class="dark:text-gray-400 space-y-4">
+            @foreach ( $questions as $item )
+                <x-question :question="$item"/>
+
+            @endforeach
+        </div>
     </x-container>
 </x-app-layout>
